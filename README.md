@@ -1,0 +1,1 @@
+Projeto feito com JavaScript puro. O arquivo anime.js contém as informações dos animes listados e o script.js faz a chamada desse arquivo.
