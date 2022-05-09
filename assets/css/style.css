@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    background-color:#EEE;
+    font-family:'Lato',Helvetica,Arial;
+    font-size:15px;
+    overflow-x: hidden;
+}
+header{
+    height: 100px;
+    background-color: #A3223D;
+    color: #FFF;
+}
+.header{
+    max-width: 1140px;
+    height: 100px;  
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 100px;
+}
+.logoimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 100px;
+    background-color: #fff;
+}
+.logoimg img{
+    width: 50px;
+}
+.menu-title{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu-title h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+}
+.body{
+    background-color:#EEE;
+    font-family:'Lato',Helvetica,Arial;
+    font-size:15px;
+    margin:0;
+    min-height:100vh;
+}
+.models {
+    display:none;
+}
+
+h1 {
+    font-family:'Hepta Slab', Helvetica, Arial;
+}
+.anime-area {
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.anime-item {
+    text-align: center;
+    max-width:250px;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    margin:0 auto 50px auto;
+}
+.anime-item a {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-decoration: none;
+}
+.anime-item--img {
+    width:220px;
+    height:320px;
+}
+.anime-item--img img {
+    width:100%;
+    height:inherit;
+}
+.anime-item--name {
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+    margin-top:5px;
+}
+.anime-item--desc {
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+}
+
+.animeWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+}
+.animeWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+.animeBig {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.animeBig img {
+    height:400px;
+    width:auto;
+}
+.animeInfo {
+    flex:1;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    padding-bottom:50px;
+    overflow: hidden;
+}
+.animeInfo .anime-item--close{
+    position: relative;
+    font-size: 25px;
+    left: 90%;
+    cursor: pointer;
+}
+.animeInfo h1 {
+    margin-top:50px;
+}
+.animeInfo .animeInfo--desc {
+    font-size:17px;
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px 25px;
+    color:#999;
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family:'Lato',Helvetica,Arial;
+}
+.animeInfo--sizes {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+.animeInfo--size {
+    padding:10px 15px;
+    color:#000;
+    background-color:#EEE;
+    font-size:13px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.animeInfo--size:hover {
+    background-color:#CCC;
+}
+.animeInfo--size.selected span {
+    color:#D6D6D6;
+}
+.animeInfo--size span {
+    font-size:16px;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.animeInfo--cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+.cart {
+    margin-bottom:20px;
+}
+.cart--item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+.cart--item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+.cart--item-nome {
+    flex:1;
+}
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+.cart--item--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart--totalitem {
+    padding:15px 0;
+    border-top:1px solid #79b9dd;
+    color:#315970;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+.cart--totalitem.big {
+    font-size:20px;
+    color:#000;
+    font-weight: bold;
+}
+.cart--finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#48d05f;
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid #63f77c;
+    transition: all ease .2s;
+}
+.cart--finalizar:hover {
+    background-color:#35af4a;
+}
+footer{
+    display: flex;
+    height: 150px;
+    color: #FFF;
+    background-color: #A3223D;
+    font-family: 'Ubuntu', sans-serif;
+}
+.footer--text{
+    display: flex;
+    font-weight: 200;
+    font-size: 20px;
+    margin: auto;
+}
+@media (max-width:1000px) {
+    .anime-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:840px) {
+    body {
+        flex-direction: column;
+    }
+    .anime-area {
+        display:block;
+    }
+    .anime-item {
+        max-width:100%;
+    }
+    header {
+        display:flex;
+    }
+    
+    main {
+        padding-top:60px;
+    }
+    .logo{
+        width: 80px;
+    }
+    .logoimg{
+        width: 60px;
+        height: 100px;
+    }
+    .logoimg img{
+        width: 40px;
+    }
+    .menu-title h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 30px;    
+    }
+    aside {
+        width:auto;
+        position:fixed;
+        left:100vw;
+        right:0;
+        top:0;
+        bottom:0;
+        transition: all ease .2s;
+    }
+    aside.show {
+        width:auto;
+    }
+    .cart--area {
+        width:100vw;
+    }
+
+    .menu-closer {
+        display:block;
+    }
+
+    .animeWindowArea {
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .animeWindowBody {
+        width:100vw;
+        display:block;
+        padding:20px;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
+
+    .animeBig img {
+        width: 75%;
+        height: auto;
+    }
+
+    .animeInfo h1 {
+        margin-top:20px;
+    }
+    .anime-item--close{
+        display: none;
+    }
+
+    .animeInfo--qtarea {
+        height:60px;
+    }
+    .animeInfo--qtarea button {
+        font-size:25px;
+        padding:0px 25px;
+    }
+    .animeInfo--qt {
+        line-height: 60px;
+        font-size:20px;
+    }
+    .animeInfo--addButton {
+        font-size:20px;
+        display:block;
+        text-align:center;
+        margin:30px auto;
+    }
+
+    .animeInfo--cancelButton {
+        display:none;
+    }
+    .animeInfo--cancelMobileButton {
+        display:block;
+    }
+}
